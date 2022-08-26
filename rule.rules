@@ -1,0 +1,206 @@
+rule "get openHAB's Live status from status.openhab.org"
+when
+    Time cron "0 0 * * * ? *"
+then
+    executeCommandLine("/usr/bin/python3","/home/openhabvm/openhab_scripts/python/status_openhab.py")
+end
+
+rule "get openHAB's Live status from status.openhab.org myopenHABCloudServiceDowntimeLastHour"
+when
+    Item myopenHABCloudServiceDowntimeLastHour changed
+then
+     changed_str = myopenHABCloudServiceDowntimeLastHour.replace("hrs", "Std.")
+     myopenHABCloudServiceDowntimeLastHour.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org myopenHABCloudServiceDowntimeLast24Hours"
+when
+    Item myopenHABCloudServiceDowntimeLast24Hours changed
+then
+    changed_str = myopenHABCloudServiceDowntimeLast24Hours.replace("hrs", "Std.")
+    myopenHABCloudServiceDowntimeLast24Hours.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org myopenHABCloudServiceDowntimeLast7Days"
+when
+    Item myopenHABCloudServiceDowntimeLast7Days changed
+then
+    changed_str = myopenHABCloudServiceDowntimeLast7Days.replace("hrs", "Std.")
+    myopenHABCloudServiceDowntimeLast7Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org myopenHABCloudServiceDowntimeLast30Days"
+when
+    Item myopenHABCloudServiceDowntimeLast30Days changed
+then
+    changed_str = myopenHABCloudServiceDowntimeLast30Days.replace("hrs", "Std.")
+    myopenHABCloudServiceDowntimeLast30Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org myopenHABCloudServiceDowntimeLast90Days"
+when
+    Item myopenHABCloudServiceDowntimeLast90Days changed
+then
+    changed_str = myopenHABCloudServiceDowntimeLast90Days.replace("hrs", "Std.")
+    myopenHABCloudServiceDowntimeLast90Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABCommunityForumDowntimeLastHour"
+when
+    Item openHABCommunityForumDowntimeLastHour changed
+then
+    changed_str = openHABCommunityForumDowntimeLastHour.replace("hrs", "Std.")
+    openHABCommunityForumDowntimeLastHour.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABCommunityForumDowntimeLast24Hours"
+when
+    Item openHABCommunityForumDowntimeLast24Hours changed
+then
+    changed_str = openHABCommunityForumDowntimeLast24Hours.replace("hrs", "Std.")
+    openHABCommunityForumDowntimeLast24Hours.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABCommunityForumDowntimeLast7Days"
+when
+    Item openHABCommunityForumDowntimeLast7Days changed
+then
+    changed_str = openHABCommunityForumDowntimeLast7Days.replace("hrs", "Std.")
+    openHABCommunityForumDowntimeLast7Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABCommunityForumDowntimeLast30Days"
+when
+    Item openHABCommunityForumDowntimeLast30Days changed
+then
+    changed_str = openHABCommunityForumDowntimeLast30Days.replace("hrs", "Std.")
+    openHABCommunityForumDowntimeLast30Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABCommunityForumDowntimeLast90Days"
+when
+    Item openHABCommunityForumDowntimeLast90Days changed
+then
+    changed_str = openHABCommunityForumDowntimeLast90Days.replace("hrs", "Std.")
+    openHABCommunityForumDowntimeLast90Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABBuildServerDowntimeLastHour"
+when
+    Item openHABBuildServerDowntimeLastHour changed
+then
+    changed_str = openHABBuildServerDowntimeLastHour.replace("hrs", "Std.")
+    openHABBuildServerDowntimeLastHour.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABBuildServerDowntimeLast24Hours"
+when
+    Item openHABBuildServerDowntimeLast24Hours changed
+then
+    changed_str = openHABBuildServerDowntimeLast24Hours.replace("hrs", "Std.")
+    openHABBuildServerDowntimeLast24Hours.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABBuildServerDowntimeLast7Days"
+when
+    Item openHABBuildServerDowntimeLast7Days changed
+then
+    changed_str = openHABBuildServerDowntimeLast7Days.replace("hrs", "Std.")
+    openHABBuildServerDowntimeLast7Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABBuildServerDowntimeLast30Days"
+when
+    Item openHABBuildServerDowntimeLast30Days changed
+then
+    changed_str = openHABBuildServerDowntimeLast30Days.replace("hrs", "Std.")
+    openHABBuildServerDowntimeLast30Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABBuildServerDowntimeLast90Days"
+when
+    Item openHABBuildServerDowntimeLast90Days changed
+then
+    changed_str = openHABBuildServerDowntimeLast90Days.replace("hrs", "Std.")
+    openHABBuildServerDowntimeLast90Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABDemoServerDowntimeLastHour"
+when
+    Item openHABDemoServerDowntimeLastHour changed
+then
+    changed_str = openHABDemoServerDowntimeLastHour.replace("hrs", "Std.")
+    openHABDemoServerDowntimeLastHour.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABDemoServerDowntimeLast24Hours"
+when
+    Item openHABDemoServerDowntimeLast24Hours changed
+then
+    changed_str = openHABDemoServerDowntimeLast24Hours.replace("hrs", "Std.")
+    openHABDemoServerDowntimeLast24Hours.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABDemoServerDowntimeLast7Days"
+when
+    Item openHABDemoServerDowntimeLast7Days changed
+then
+    changed_str = openHABDemoServerDowntimeLast7Days.replace("hrs", "Std.")
+    openHABDemoServerDowntimeLast7Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABDemoServerDowntimeLast30Days"
+when
+    Item openHABDemoServerDowntimeLast30Days changed
+then
+    changed_str = openHABDemoServerDowntimeLast30Days.replace("hrs", "Std.")
+    openHABDemoServerDowntimeLast30Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABDemoServerDowntimeLast90Days"
+when
+    Item openHABDemoServerDowntimeLast90Days changed
+then
+    changed_str = openHABDemoServerDowntimeLast90Days.replace("hrs", "Std.")
+    openHABDemoServerDowntimeLast90Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABOnlineRepositoryDowntimeLastHour"
+when
+    Item openHABOnlineRepositoryDowntimeLastHour changed
+then
+    changed_str = openHABOnlineRepositoryDowntimeLastHour.replace("hrs", "Std.")
+    openHABOnlineRepositoryDowntimeLastHour.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABOnlineRepositoryDowntimeLast24Hours"
+when
+    Item openHABOnlineRepositoryDowntimeLast24Hours changed
+then
+    changed_str = openHABOnlineRepositoryDowntimeLast24Hours.replace("hrs", "Std.")
+    openHABOnlineRepositoryDowntimeLast24Hours.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABOnlineRepositoryDowntimeLast7Days"
+when
+    Item openHABOnlineRepositoryDowntimeLast7Days changed
+then
+    changed_str = openHABOnlineRepositoryDowntimeLast7Days.replace("hrs", "Std.")
+    openHABOnlineRepositoryDowntimeLast7Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABOnlineRepositoryDowntimeLast30Days"
+when
+    Item openHABOnlineRepositoryDowntimeLast30Days changed
+then
+    changed_str = openHABOnlineRepositoryDowntimeLast30Days.replace("hrs", "Std.")
+    openHABOnlineRepositoryDowntimeLast30Days.postUpdate(changed_str)
+end
+
+rule "get openHAB's Live status from status.openhab.org openHABOnlineRepositoryDowntimeLast90Days"
+when
+    Item openHABOnlineRepositoryDowntimeLast90Days changed
+then
+    changed_str = openHABOnlineRepositoryDowntimeLast90Days.replace("hrs", "Std.")
+    openHABOnlineRepositoryDowntimeLast90Days.postUpdate(changed_str)
+end
