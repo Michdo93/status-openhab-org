@@ -1,6 +1,8 @@
 # status-openhab-org
 openHAB's live status from [status.openhab.org](http://status.openhab.org/) as items inside your openHAB instance.
 
+**Soup = Software of unknown (or uncertain) pedigree (or provenance).**
+
 ## Installation
 
 ### Python
